@@ -1,12 +1,12 @@
--- modified from Kapathy code
--- Modified from https://github.com/karpathy/char-rnn/
--- which was modified from https://github.com/oxford-cs-ml-2015/practical6
--- author: Ke Tran <m.k.tran@uva.nl>
--- date: 29/11/2015
---[[
-    In this implementation, sentences of the same length are put into one bucket.
-    This helps to avoid doing padding and it's more NLPish.
-    Attempt to feed data stochastically.
+--[[ Modified from https://github.com/karpathy/char-rnn/
+which was modified from https://github.com/oxford-cs-ml-2015/practical6
+modifier: Ke Tran <m.k.tran@uva.nl>
+
+Date: 29/11/2015
+
+In this implementation, sentences of the same length are put into one bucket.
+This helps to avoid doing padding and it's more NLPish.
+Attempt to feed data stochastically.
 --]]
 
 

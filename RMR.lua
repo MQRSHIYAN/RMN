@@ -1,11 +1,11 @@
---[[
-    Recurrent Memory Network
-    In this implementation, there is no padding for memory block
-    that is at the beginning of the sentence, the number of previous words fed into memory block
-    increasing from 1 to memory size (15 by default)
-    no waste of attention on those padding words
-    author: Ke Tran <m.k.tran@uva.nl>
-    date: 19/11/2015
+--[[ Recurrent Memory Network
+In this implementation, there is no padding for memory block
+that is at the beginning of the sentence, the number of previous words fed into memory block
+increasing from 1 to memory size (15 by default)
+no waste of attention on those padding words
+
+Author: Ke Tran <m.k.tran@uva.nl>
+Date: 19/11/2015
 --]]
 require 'torch'
 require 'nn'
@@ -21,7 +21,7 @@ local LSTM = require 'model.LSTM'
 
 cmd = torch.CmdLine()
 cmd:text()
-cmd:text('Train Stack Recurrent Memory language Model')
+cmd:text('Train Recurrent Memory Network for Language Modeling')
 cmd:text()
 cmd:text('Options')
 -- data
@@ -226,6 +226,7 @@ function save_checkpoint(savefile, epoch)
     checkpont.epoch = epoch
     torch.save(savefile, checkpont)
 end
+
 
 function train_minibatch()
     if not opt.time then
