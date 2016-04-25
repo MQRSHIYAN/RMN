@@ -1,5 +1,4 @@
 local MemNN = {}
-paths.dofile('LinearNB.lua')
 function MemNN.build_memory(params, input, context, time)
     local hid = {}
     hid[0] = input
@@ -26,7 +25,7 @@ function MemNN.build_memory(params, input, context, time)
         local probs3dim = nn.View(1, -1):setNumInputDims(1)(P)
         local MMbout = nn.MM(false, false)
         local Bout = MMbout({probs3dim, Bin})
-        local C = nn.LinearNB(params.edim, params.edim)(hid[h-1])
+        local C = nn.Linear(params.edim, params.edim, false)(hid[h-1])
         table.insert(shareList[1], C)
         local D = nn.CAddTable()({C, Bout})
         if params.lindim == params.edim then
