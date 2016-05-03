@@ -1,10 +1,10 @@
-# Recurrent Memory Network
+# Recurrent Memory Networks
 
-This code implement the Recurrent Memory Networks (RM and RMR) described in
+This code implements Recurrent Memory Networks (RM and RMR) described in
 
-	Recurrent Memory Network for Language Modeling 
+	Recurrent Memory Networks for Language Modeling 
 	Ke Tran, Arianna Bisazza, and Christof Monz 
-	InProceedings of NAACL 2016
+	In Proceedings of NAACL 2016
 
 
 Much of this code is based on [char-nn](https://github.com/karpathy/char-rnn).
@@ -28,5 +28,5 @@ Since we are interested mostly in long distant dependencies, we only selected se
 
 
 ## TODO:
-- clean up the code (remove some experimental setting)
+- clean up the code (remove some experimental settings)
 - fast output layer?
