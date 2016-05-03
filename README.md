@@ -24,7 +24,7 @@ $ th RM.lua -max_seq_length 80 -min_seq_length 10 -max_epochs 20 \
 There are many settings we didn't perform in our paper, for example increasing the embedding size, stacking multiple LSTM layers, etc. The reason is that we have a limitted time to spend on shared GPUs.
 
 ## Data Processing
-Since we are interested mostly in long distant dependencies, we only select sentences whose lengths are in between 10 and 80 tokens. If you want to compare to our results, ideally, you should use the same setting.
+Since we are interested mostly in long distant dependencies, we only selected sentences whose lengths are in between 10 and 80 tokens (use this option `-max_seq_length 80 -min_seq_length 10`). If you want to compare to our results, ideally, you should use the same setting.
 
 
 ## TODO:
