@@ -9,7 +9,11 @@ This code implements Recurrent Memory Networks (RM and RMR) described in
 
 Much of this code is based on [char-nn](https://github.com/karpathy/char-rnn).
 
-
+## Getting data
+The data is pushed using [git-lfs](https://git-lfs.github.com/). To get the data, you need to have git-lfs installed, then just do
+```
+$ git lfs pull
+```
 ## Use the code
 
 Here is an example how to run the code. 
